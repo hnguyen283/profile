@@ -108,8 +108,8 @@ md-toolbar h1 {
 
 .avatar {
   position: relative;
-  width: 128px;
-  height: 128px;
+  width: 380px;
+  height: 380px;
   border: 1px solid #ddd;
   border-radius: 50%;
   display: inline-block;
@@ -285,4 +285,23 @@ span.name {
   font-size: 20px;
   align-self: baseline;
   margin-left: 5px;
+}
+
+.content-timeline{
+
+}
+
+.content-body{
+  border-left-color: #337ab7;
+  border-left-width: 3px;
+  border-left-style: inset;
+}
+
+.content-body h3{
+  color: #337ab7;
+  margin-bottom: 20px;
+}
+
+.flex-stretch{
+  width: 100%;
 }

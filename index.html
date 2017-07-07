@@ -39,128 +39,93 @@
 </head>
 
 <body ng-controller="HomeController as home">
-    <!-- Navigation -->
-    <div class="row">
-        <nav class="navbar navbar-default main-color" style="z-index: 1;" role="navigation">
-            <div class="container">
-                <div class="flex-container">
-                    <div class="flex-row">
-                        <div class="flex-col header-bar padding-10">
-                            <a class="flex-align-self-start" href="#">Édition 2017</a>
-                        </div>
-                        <div class="flex-col header-bar flex-grow-5">
-                            <h2 class="flex-align-self-center margin-0" ng-click="nextItem()" href="#">{{dataset['Nom du produit']}}</h2>
-                        </div>
-                        <div class="flex-col header-bar color-1">
-                            <a class="flex-align-self-center" href="#">{{dataset['Type de produit']}}</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- /.container -->
-        </nav>
-    </div>
-    <!-- Page Content -->
     <div class="container">
-
         <!-- /.row -->
         <div class="row">
-            <div class="col-md-6">
-                <div class="col-md-12">
-                    <img class="img-responsive" src="images/img.jpg" alt="">
-                </div>
-                <div class="flex-container logo-area padding-10">
-                    <div class="flex-row">
-                        <div class="flex-col">
-                            <p class="margin-10">{{dataset['Nom du produit']}}</p>
+            <div class="col-md-12">
+                <div class="flex-container">
+                    <div class="flex-row flex-align-self-center">
+                        <div class="flex-col flex-align-self-center">
+                            <img class="avatar img-responsive flex-align-self-center" src="images/avatar.jpg" alt="">
                         </div>
-                    </div>
-                    <hr>
-                    <div class="flex-row" style="padding-left: 60px;">
-                        <img class="img-responsive" style="height:70px;" ng-src="images/{{dataset['Marque Logo']}}.jpg" alt="">
                     </div>
                 </div>
             </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-12">
+                <h2 class="page-header">What is <a href="http://www.bingboo.com">www.bingboo.com</a> ?</h2>
+            </div>
             <div class="col-md-6">
-                <div class="flex-container tiltle-detail">
-                    <div class="flex-col">
-                        <h3 class="margin-10 color-white flex-align-self-center">{{dataset['Matière']}} {{dataset['Dimensions']}}</h3>
-                    </div>
-                </div>
-                <div class="flex-container">
-                    <div class="flex-col">
-                        <p class="detail-t">{{dataset['Sous Chapitre']}}</p>
-                        <div class="flex-row">
-                            <p class="detail-t">Epaisseur: </p>
-                            <p class="detail-p"> {{dataset['Epaisseur']}}</p>
-                        </div>
-                        <div class="flex-row">
-                            <p class="detail-t">Coloris au choix : </p>
-                            <p class="detail-p"> {{dataset['Coloris']}}</p>
-                        </div>
-                        <div class="flex-row" ng-if="dataset['Type de produit'] == 'Listel 5 x 25'">
-                            <p class="detail-t">Listel au choix :</p>
-                            <p class="detail-p"> {{dataset['Coloris']}}</p>
-                        </div>
-                        <div class="flex-row" ng-if="dataset['Type de produit'] == 'Décor'">
-                            <p class="detail-t">Décors au choix :</p>
-                            <p class="detail-p"> {{dataset['Coloris']}}</p>
-                        </div>
-                        <div class="flex-row" ng-if="dataset['Type de produit'] == 'Décor/Listel'">
-                            <p class="detail-t">Décor/Listel au choix :</p>
-                            <p class="detail-p"> {{dataset['Coloris']}}</p>
-                        </div>
-                        <div class="flex-row">
-                            <p class="detail-t">{{dataset['Type de produit']}}</p>
-                        </div>
-                        <div class="flex-row">
-                            <div class="flex-col">
-                                <!--<img class="img-responsive" ng-src="images/{{dataset['PACKSHOT DECLINAISON PRODUITS']}}.jpg" alt="">-->
-                                <img class="img-responsive flex-align-self-center" style="height:100px;" ng-src="images/{{dataset['PACKSHOT DECLINAISON PRODUITS']}}.jpg"
-                                    alt="">
-                                <div class="flex-row flex-align-self-center">
-                                    <p class="color-black margin-left-right-5" style="font-weight: bold">{{dataset['Code article']}}</p>
-                                    <p class="margin-left-right-5">{{dataset['Coloris']}}</p>
+                <h4>It's my project: a social website!</h4>
+                <ul class="margin-10">
+                    <li><strong>Free for all people - Standard</strong></li>
+                    <li><strong>Your website, your design - VIP</strong></li>
+                    <li>Place for your life, your style!</li>
+                    <li>Working space for anywhere</li>
+                    <li>Project management</li>
+                    <li>Searching and Data mining</li>
+                </ul>
+                <p>
+                    This project still in building process. <br> If you feel interested, please don't mind to contact us!
+                </p>
+            </div>
+            <div class="col-md-6">
+                <img class="img-responsive" src="http://placehold.it/700x450" alt="">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <h2 class="page-header">Personal</h2>
+            </div>
+            <div class="col-md-12">
+                <div class="row">
+                    <div class="col-md-3 content-timeline">
+                        <div class="flex-container">
+                            <div class="flex-row flex-align-self-end">
+                                <div class="flex-col flex-align-self-center">
+                                    <h3><a href="#">Feb/2016 - Now</a></h3>
                                 </div>
                             </div>
                         </div>
-                        <div class="flex-row">
-                            <p class="detail-t">DÉCOR</p>
+                    </div>
+                    <div class="col-md-9 content-body">
+                        <div class="flex-container">
+                            <div class="flex-row flex-align-self-start flex-stretch">
+                                <div class="flex-col flex-align-self-start flex-stretch">
+                                    <div class="row flex-stretch">
+                                        <div class="col-md-12">
+                                            <h3>Software Engineer </h3>
+                                        </div>
+                                    </div>
+                                    <div class="row flex-stretch">
+                                        <div class="col-md-6">
+                                            <p><strong>Company:</strong> DXC.Technology Vietnam</p>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <p><strong>Website:</strong> <a href="http://www.dxc.technology/">http://www.dxc.technology/</a></p>
+                                        </div>
+                                    </div>
+                                    <div class="row flex-stretch">
+                                        <div class="col-md-6">
+                                            <p><strong>Position:</strong> Web Full-stack development</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
         <!-- Portfolio Section -->
-        <div class="row margin-top-bottom-40">
-            <div class="col-md-6">
-                <div class="flex-container">
-                    <div class="flex-row flex-align-self-start">
-                        <img class="img-responsive margin-left-right-5" style="height:40px;margin-left: 20px;" src="images/info.png" alt="">
-                        <img class="img-responsive margin-left-right-5" style="height:40px;" src="images/Mur-Exterieur.png" alt="">
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-6">
-                <div class="flex-container tiltle-detail">
-                    <div class="flex-col">
-                        <h3 class="margin-10 color-white flex-align-self-center">Disponibilité</h3>
-                    </div>
-                </div>
-                <div class="flex-container">
-                    <div class="flex-col">
-                        <p class="detail-p"> {{dataset['Descriptif technique complet']}}</p>
-                    </div>
-                </div>
-            </div>
-        </div>
+
         <!-- Footer -->
         <footer>
             <div class="row">
                 <div class="flex-container">
                     <div class="flex-row flex-align-self-end">
-                        <a class="margin-left-right-15" style="font-size:20px;color: #F88B35;font-weight: bold;align-self: flex-end;" href="www.pointp.fr">www.pointp.fr</a>
-                        <img class="img-responsive margin-left-right-15 " style="height:50px;" src="images/logo_PointP.jpg" alt="">
+                        <p>Copyright &copy; Hung Dong Nguyen (2017)</p>
                     </div>
                 </div>
             </div>
@@ -172,16 +137,7 @@
         <script src="js/bootstrap.min.js"></script>
 
     </div>
-    <!-- /.container -->
 
-    <div class="left-side-bar main-color">
-        <div class="flex-row">
-            <h3 class="margin-top-bottom-40 flex-align-self-end">Gamme </h3>
-        </div>
-        <div class="flex-row">
-            <h3 class="margin-top-bottom-40 flex-align-self-start">{{dataset['Gamme']}}</h3>
-        </div>
-    </div>
     <!-- Script to Activate the Carousel -->
     <script>
         $('.carousel').carousel({
