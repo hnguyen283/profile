@@ -297,8 +297,7 @@ span.name {
   border-left-style: inset;
 }
 
-.content-body h3{
-  color: #337ab7;
+.content-body h4 {  
   margin-bottom: 20px;
 }
 
@@ -308,4 +307,8 @@ span.name {
 
 .margin-bottom-20{  
   margin-bottom: 20px;
+}
+
+h4 {
+  color: #337ab7;
 }
