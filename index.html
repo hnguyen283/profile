@@ -1,0 +1,194 @@
+<html lang="en" ng-app="hungApp">
+
+<head>
+    <!-- Header -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Modern Business - Start Bootstrap Template</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="css/modern-business.css" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+    <link type="text/css" rel="stylesheet" href="css/custom.css" />
+    <link type="text/css" rel="stylesheet" href="css/app.css" />
+
+    <script type="text/javascript" src="js/Chart.js"></script>
+    <!-- Angular Material requires Angular.js Libraries -->
+    <script type="text/javascript" src="js/angular.js"></script>
+    <script type="text/javascript" src="js/angular-animate.js"></script>
+    <script type="text/javascript" src="js/angular-aria.js"></script>
+    <script type="text/javascript" src="js/angular-messages.js"></script>
+    <script type="text/javascript" src="js/angular-route.js"></script>
+    <script type="text/javascript" src="js/angular-chart.js"></script>
+
+    <script src="app-code/app.js"></script>
+    <script src="app-code/directive.js"></script>
+    <script src="app-code/common-service.js"></script>
+    <script src="app-code/home/home-controller.js"></script>
+
+</head>
+
+<body ng-controller="HomeController as home">
+    <!-- Navigation -->
+    <div class="row">
+        <nav class="navbar navbar-default main-color" style="z-index: 1;" role="navigation">
+            <div class="container">
+                <div class="flex-container">
+                    <div class="flex-row">
+                        <div class="flex-col header-bar padding-10">
+                            <a class="flex-align-self-start" href="#">Édition 2017</a>
+                        </div>
+                        <div class="flex-col header-bar flex-grow-5">
+                            <h2 class="flex-align-self-center margin-0" ng-click="nextItem()" href="#">{{dataset['Nom du produit']}}</h2>
+                        </div>
+                        <div class="flex-col header-bar color-1">
+                            <a class="flex-align-self-center" href="#">{{dataset['Type de produit']}}</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- /.container -->
+        </nav>
+    </div>
+    <!-- Page Content -->
+    <div class="container">
+
+        <!-- /.row -->
+        <div class="row">
+            <div class="col-md-6">
+                <div class="col-md-12">
+                    <img class="img-responsive" src="images/img.jpg" alt="">
+                </div>
+                <div class="flex-container logo-area padding-10">
+                    <div class="flex-row">
+                        <div class="flex-col">
+                            <p class="margin-10">{{dataset['Nom du produit']}}</p>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="flex-row" style="padding-left: 60px;">
+                        <img class="img-responsive" style="height:70px;" ng-src="images/{{dataset['Marque Logo']}}.jpg" alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="flex-container tiltle-detail">
+                    <div class="flex-col">
+                        <h3 class="margin-10 color-white flex-align-self-center">{{dataset['Matière']}} {{dataset['Dimensions']}}</h3>
+                    </div>
+                </div>
+                <div class="flex-container">
+                    <div class="flex-col">
+                        <p class="detail-t">{{dataset['Sous Chapitre']}}</p>
+                        <div class="flex-row">
+                            <p class="detail-t">Epaisseur: </p>
+                            <p class="detail-p"> {{dataset['Epaisseur']}}</p>
+                        </div>
+                        <div class="flex-row">
+                            <p class="detail-t">Coloris au choix : </p>
+                            <p class="detail-p"> {{dataset['Coloris']}}</p>
+                        </div>
+                        <div class="flex-row" ng-if="dataset['Type de produit'] == 'Listel 5 x 25'">
+                            <p class="detail-t">Listel au choix :</p>
+                            <p class="detail-p"> {{dataset['Coloris']}}</p>
+                        </div>
+                        <div class="flex-row" ng-if="dataset['Type de produit'] == 'Décor'">
+                            <p class="detail-t">Décors au choix :</p>
+                            <p class="detail-p"> {{dataset['Coloris']}}</p>
+                        </div>
+                        <div class="flex-row" ng-if="dataset['Type de produit'] == 'Décor/Listel'">
+                            <p class="detail-t">Décor/Listel au choix :</p>
+                            <p class="detail-p"> {{dataset['Coloris']}}</p>
+                        </div>
+                        <div class="flex-row">
+                            <p class="detail-t">{{dataset['Type de produit']}}</p>
+                        </div>
+                        <div class="flex-row">
+                            <div class="flex-col">
+                                <!--<img class="img-responsive" ng-src="images/{{dataset['PACKSHOT DECLINAISON PRODUITS']}}.jpg" alt="">-->
+                                <img class="img-responsive flex-align-self-center" style="height:100px;" ng-src="images/{{dataset['PACKSHOT DECLINAISON PRODUITS']}}.jpg"
+                                    alt="">
+                                <div class="flex-row flex-align-self-center">
+                                    <p class="color-black margin-left-right-5" style="font-weight: bold">{{dataset['Code article']}}</p>
+                                    <p class="margin-left-right-5">{{dataset['Coloris']}}</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="flex-row">
+                            <p class="detail-t">DÉCOR</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Portfolio Section -->
+        <div class="row margin-top-bottom-40">
+            <div class="col-md-6">
+                <div class="flex-container">
+                    <div class="flex-row flex-align-self-start">
+                        <img class="img-responsive margin-left-right-5" style="height:40px;margin-left: 20px;" src="images/info.png" alt="">
+                        <img class="img-responsive margin-left-right-5" style="height:40px;" src="images/Mur-Exterieur.png" alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="flex-container tiltle-detail">
+                    <div class="flex-col">
+                        <h3 class="margin-10 color-white flex-align-self-center">Disponibilité</h3>
+                    </div>
+                </div>
+                <div class="flex-container">
+                    <div class="flex-col">
+                        <p class="detail-p"> {{dataset['Descriptif technique complet']}}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Footer -->
+        <footer>
+            <div class="row">
+                <div class="flex-container">
+                    <div class="flex-row flex-align-self-end">
+                        <a class="margin-left-right-15" style="font-size:20px;color: #F88B35;font-weight: bold;align-self: flex-end;" href="www.pointp.fr">www.pointp.fr</a>
+                        <img class="img-responsive margin-left-right-15 " style="height:50px;" src="images/logo_PointP.jpg" alt="">
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!-- jQuery -->
+        <script src="js/jquery.js"></script>
+
+        <!-- Bootstrap Core JavaScript -->
+        <script src="js/bootstrap.min.js"></script>
+
+    </div>
+    <!-- /.container -->
+
+    <div class="left-side-bar main-color">
+        <div class="flex-row">
+            <h3 class="margin-top-bottom-40 flex-align-self-end">Gamme </h3>
+        </div>
+        <div class="flex-row">
+            <h3 class="margin-top-bottom-40 flex-align-self-start">{{dataset['Gamme']}}</h3>
+        </div>
+    </div>
+    <!-- Script to Activate the Carousel -->
+    <script>
+        $('.carousel').carousel({
+            interval: 5000 //changes the speed
+        })
+    </script>
+
+</body>
+
+</html>
